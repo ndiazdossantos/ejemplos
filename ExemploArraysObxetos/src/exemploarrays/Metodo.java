@@ -5,6 +5,7 @@
  */
 package exemploarrays;
 
+import java.util.Arrays;
 import metodos.PedirDato;
 
 /**
@@ -45,4 +46,11 @@ public class Metodo {
           for(Xogador elemento:lista)   //foreach
          System.out.println(elemento);
       }  
+      //siguiente clase
+      public void ordenarDorsal(Xogador[]lista){
+          Arrays.sort(lista);
+      }
+      public void ordenarNombre(Xogador[]lista){
+          Arrays.sort(lista);
+    }
 }

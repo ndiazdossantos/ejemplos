@@ -16,6 +16,9 @@ public class ExemploArrays {
        Xogador[] futbol = new Xogador[Metodo.elementos()];
        Metodo obx1 = new Metodo();
        obx1.crearArraysProfe(futbol);
+     //  obx1.ordenarDorsal(futbol);
+      // obx1.amosarArrays(futbol);
+       obx1.ordenarNombre(futbol);
        obx1.amosarArrays(futbol);
     }
     

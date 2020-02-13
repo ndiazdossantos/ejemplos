@@ -9,7 +9,7 @@ package exemploarrays;
  *
  * @author noese
  */
-public class Xogador {
+public class Xogador implements Comparable {
     String nome;
     int dorsal;
 
@@ -39,7 +39,40 @@ public class Xogador {
 
     @Override
     public String toString() {
-        return "nome=" + nome + ", dorsal=" + dorsal;
+        return "Xogadores : "+"\n nome : "+nome+" Dorsal: "+dorsal;
+    }
+   // siguiente dia de clase
+    public int compareTo(Xogador t){
+        if(this.dorsal< t.dorsal)
+            return -1;
+        else if(this.dorsal>t.dorsal)
+            return 1;
+        else
+            return 0;
+    }
+   /* @Override
+    public int compareTo(Object o){
+    Xogador x = (Xogador) o;
+    if(this.dorsal<x.dorsal)
+        return -1;
+    else if(this.dorsal>x.dorsal)
+        return -1;
+    else
+    return 0;
+}
+*/
+    @Override
+       public int compareTo(Object o){
+        
+         Xogador xog = (Xogador)o ;
+         
+         if(this.nome.compareToIgnoreCase(xog.nome)==0)
+           return 0;
+         else if(this.nome.compareToIgnoreCase(xog.nome)>0)
+             return 1;
+         else 
+              return -1 ;
+        
     }
     
 }
